@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
 import { StatusBadge } from "./StatusBadge";
+import { BackgroundCheckProgress } from "./BackgroundCheckProgress";
 import { Eye, Mail, Calendar } from "lucide-react";
 import type { Candidate } from "@/data/candidates";
 import { useNavigate } from "react-router-dom";
@@ -77,6 +78,8 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
                   </h3>
                   <StatusBadge status={candidate.status} />
                 </div>
+                
+                <BackgroundCheckProgress candidate={candidate} className="mb-2" />
                 
                 <div className="flex items-center gap-6 text-sm text-muted-foreground mb-2">
                   <div className="flex items-center gap-1.5">
