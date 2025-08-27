@@ -24,6 +24,29 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				brand: {
+					primary: 'hsl(var(--brand-primary))',
+					'primary-dark': 'hsl(var(--brand-primary-dark))',
+					secondary: 'hsl(var(--brand-secondary))',
+					accent: 'hsl(var(--brand-accent))',
+				},
+				
+				status: {
+					success: 'hsl(var(--success))',
+					'success-foreground': 'hsl(var(--success-foreground))',
+					'success-light': 'hsl(var(--success-light))',
+					warning: 'hsl(var(--warning))',
+					'warning-foreground': 'hsl(var(--warning-foreground))',
+					'warning-light': 'hsl(var(--warning-light))',
+					danger: 'hsl(var(--danger))',
+					'danger-foreground': 'hsl(var(--danger-foreground))',
+					'danger-light': 'hsl(var(--danger-light))',
+					pending: 'hsl(var(--pending))',
+					'pending-foreground': 'hsl(var(--pending-foreground))',
+					'pending-light': 'hsl(var(--pending-light))',
+				},
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -50,7 +73,8 @@ export default {
 				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					foreground: 'hsl(var(--card-foreground))',
+					border: 'hsl(var(--card-border))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
