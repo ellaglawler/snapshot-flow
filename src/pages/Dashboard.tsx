@@ -135,7 +135,7 @@ export const Dashboard = () => {
               <h2 className="text-xl font-semibold text-brand-primary">Recent Security Screenings</h2>
               <Button 
                 onClick={() => setShowForm(!showForm)}
-                className="bg-brand-primary hover:bg-brand-primary-dark text-white border border-brand-accent/20 shadow-lg hover:shadow-xl transition-all duration-200"
+                className="bg-black hover:bg-gray-900 text-white border border-brand-accent/20 shadow-lg hover:shadow-xl transition-all duration-200"
               >
                 <UserPlus size={16} className="mr-2" />
                 Run Security Check
@@ -188,7 +188,7 @@ export const Dashboard = () => {
                 </Button>
                 <Button 
                   onClick={() => setShowForm(true)}
-                  className="w-full justify-start h-12 bg-gradient-to-r from-brand-primary to-brand-primary-dark hover:from-brand-primary-dark hover:to-brand-primary transition-all duration-200 shadow-lg hover:shadow-xl border border-brand-accent/20"
+                  className="w-full justify-start h-12 bg-black hover:bg-gray-900 transition-all duration-200 shadow-lg hover:shadow-xl border border-brand-accent/20"
                 >
                   <div className="p-1.5 bg-brand-accent/20 rounded-md mr-3">
                     <UserPlus size={16} className="text-brand-accent" />
