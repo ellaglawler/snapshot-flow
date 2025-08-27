@@ -77,9 +77,8 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
                     {candidate.name}
                   </h3>
                   <StatusBadge status={candidate.status} />
+                  <BackgroundCheckProgress candidate={candidate} />
                 </div>
-                
-                <BackgroundCheckProgress candidate={candidate} className="mb-2" />
                 
                 <div className="flex items-center gap-6 text-sm text-muted-foreground mb-2">
                   <div className="flex items-center gap-1.5">
