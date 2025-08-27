@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
@@ -12,6 +13,7 @@ export const Dashboard = () => {
   const [candidates, setCandidates] = useState<Candidate[]>(initialCandidates);
   const [showForm, setShowForm] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleAddCandidate = (name: string, email: string) => {
     const newCandidate: Candidate = {
@@ -52,7 +54,12 @@ export const Dashboard = () => {
                 <p className="text-sm font-medium text-white">Orien Careers Security</p>
                 <p className="text-xs text-white/70">ella@oriencareers.com</p>
               </div>
-              <Button variant="outline" size="sm" className="border-brand-accent/50 text-brand-accent hover:bg-brand-accent hover:text-black font-semibold">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="border-brand-accent/50 text-brand-accent hover:bg-brand-accent hover:text-black font-semibold"
+                onClick={() => navigate("/login")}
+              >
                 Logout
               </Button>
             </div>
