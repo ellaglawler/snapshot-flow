@@ -72,12 +72,10 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
               </Avatar>
               
               <div className="flex-1">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-3">
-                    <h3 className="text-lg font-bold text-card-foreground group-hover:text-brand-primary transition-colors">
-                      {candidate.name}
-                    </h3>
-                  </div>
+                <div className="flex items-center mb-2">
+                  <h3 className="text-lg font-bold text-card-foreground group-hover:text-brand-primary transition-colors mr-4">
+                    {candidate.name}
+                  </h3>
                   <BackgroundCheckProgress candidate={candidate} />
                 </div>
                 
