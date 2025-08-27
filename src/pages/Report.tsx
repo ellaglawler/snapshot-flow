@@ -81,7 +81,7 @@ export const Report = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-card-border bg-white">
+      <header className="border-b border-card-border bg-black">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
