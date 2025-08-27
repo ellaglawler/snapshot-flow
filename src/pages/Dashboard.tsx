@@ -48,7 +48,7 @@ export const Dashboard = () => {
       <header className="bg-black shadow-2xl border-b-2 border-brand-accent/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Logo className="text-white [&_span]:text-white" />
+            <Logo className="text-white [&_span]:text-white" variant="white" />
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <p className="text-sm font-medium text-white">Orien Careers Security</p>
