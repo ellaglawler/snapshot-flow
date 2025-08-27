@@ -68,17 +68,9 @@ export const Dashboard = () => {
       </header>
 
       <div className="container mx-auto px-4 py-8">
-        {/* Dashboard Header with Security Theme */}
-        <div className="mb-8 relative">
-          <div className="absolute -left-4 top-0 w-1 h-full bg-brand-accent rounded-full"></div>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-primary to-brand-primary bg-clip-text text-transparent mb-2">
-            Security Background Checks
-          </h1>
-          <p className="text-muted-foreground text-lg">Advanced candidate screening and threat assessment</p>
-        </div>
-
         {/* Enhanced Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 relative">
+          <div className="absolute -left-4 top-0 w-1 h-full bg-brand-accent rounded-full"></div>
           <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
