@@ -78,10 +78,9 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
                       {candidate.name}
                     </h3>
                   </div>
-                </div>
-                <div className="mb-2">
                   <BackgroundCheckProgress candidate={candidate} />
                 </div>
+                
                 
                 <div className="flex items-center gap-6 text-sm text-muted-foreground mb-2">
                   <div className="flex items-center gap-1.5">
