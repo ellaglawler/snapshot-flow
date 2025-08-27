@@ -19,17 +19,17 @@ export const StatusBadge = ({ status, className }: StatusBadgeProps) => {
       className: "bg-blue-50 text-blue-700 border-blue-200 shadow-sm animate-pulse"
     },
     clear: {
-      label: "✅ Clear",
+      label: "Clear",
       icon: CheckCircle,
       className: "bg-gradient-to-r from-status-success-light to-status-success-light/70 text-status-success border-status-success/30 shadow-sm"
     },
     review: {
-      label: "⚠️ Review",
+      label: "Review",
       icon: AlertTriangle,
       className: "bg-gradient-to-r from-status-warning-light to-status-warning-light/70 text-status-warning border-status-warning/30 shadow-sm"
     },
     rejected: {
-      label: "❌ Rejected",
+      label: "Rejected",
       icon: XCircle,
       className: "bg-gradient-to-r from-status-danger-light to-status-danger-light/70 text-status-danger border-status-danger/30 shadow-sm"
     }
