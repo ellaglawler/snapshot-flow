@@ -161,6 +161,27 @@ export const Report = () => {
               <Card className="border-card-border">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
+                    <Briefcase className="w-5 h-5 text-brand-primary" />
+                    Employment History
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground">Status</span>
+                    <div className="flex items-center gap-2">
+                      {getStatusIcon(reportData.employment)}
+                      <Badge className={getStatusColor(reportData.employment)}>
+                        {reportData.employment === 'verified' ? 'Verified' : 
+                         reportData.employment === 'partial' ? 'Partial' : 'Pending'}
+                      </Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-card-border">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
                     <Shield className="w-5 h-5 text-brand-primary" />
                     Criminal Record
                   </CardTitle>
@@ -203,27 +224,6 @@ export const Report = () => {
               <Card className="border-card-border">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
-                    <Briefcase className="w-5 h-5 text-brand-primary" />
-                    Employment History
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Status</span>
-                    <div className="flex items-center gap-2">
-                      {getStatusIcon(reportData.employment)}
-                      <Badge className={getStatusColor(reportData.employment)}>
-                        {reportData.employment === 'verified' ? 'Verified' : 
-                         reportData.employment === 'partial' ? 'Partial' : 'Pending'}
-                      </Badge>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-card-border">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center gap-2 text-lg">
                     <Users className="w-5 h-5 text-brand-primary" />
                     Social Media
                   </CardTitle>
@@ -254,10 +254,10 @@ export const Report = () => {
                     <span className="text-sm text-muted-foreground">Status</span>
                     <div className="flex items-center gap-2">
                       {getStatusIcon(reportData.onlinePresence)}
-                       <Badge className={getStatusColor(reportData.onlinePresence)}>
-                         {reportData.onlinePresence === 'clear' ? 'Clear' : 
-                          reportData.onlinePresence === 'pending' ? 'Pending' : 'Review'}
-                       </Badge>
+                      <Badge className={getStatusColor(reportData.onlinePresence)}>
+                        {reportData.onlinePresence === 'clear' ? 'Clear' : 
+                         reportData.onlinePresence === 'pending' ? 'Pending' : 'Review'}
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
