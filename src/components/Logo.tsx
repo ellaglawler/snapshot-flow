@@ -5,7 +5,7 @@ interface LogoProps {
 
 export const Logo = ({ className, showText = true }: LogoProps) => {
   return (
-    <div className={`flex items-center gap-1 ${className}`}>
+    <div className={`flex items-center gap-0.5 ${className}`}>
       <div className="relative">
         <img 
           src="/lovable-uploads/bfd78908-aa30-49ad-908c-423d090f1051.png" 
