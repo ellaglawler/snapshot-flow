@@ -71,7 +71,7 @@ export const Dashboard = () => {
         {/* Enhanced Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 relative">
           <div className="absolute -left-4 top-0 w-1 h-full bg-brand-accent rounded-full"></div>
-          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
+          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-black border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/30">
@@ -85,7 +85,7 @@ export const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
+          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-black border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/30">
@@ -99,7 +99,7 @@ export const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
+          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-black border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/30">
@@ -113,7 +113,7 @@ export const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
+          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-black border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/30">
