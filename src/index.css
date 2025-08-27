@@ -10,11 +10,11 @@
     --background: 0 0% 99%;
     --foreground: 215 25% 15%;
 
-    /* Brand identity */
-    --brand-primary: 217 91% 60%;
-    --brand-primary-dark: 217 91% 45%;
+    /* Brand identity - Security Theme */
+    --brand-primary: 220 13% 18%;
+    --brand-primary-dark: 220 13% 9%;
     --brand-secondary: 220 14% 96%;
-    --brand-accent: 217 91% 60%;
+    --brand-accent: 25 95% 53%;
 
     /* Status colors */
     --success: 142 76% 36%;
@@ -41,7 +41,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    --primary: 217 91% 60%;
+    --primary: 220 13% 18%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 220 14% 96%;
@@ -58,7 +58,7 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --ring: 25 95% 53%;
 
     --radius: 0.5rem;
 
@@ -76,7 +76,7 @@
 
     --sidebar-border: 220 13% 91%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 25 95% 53%;
   }
 
   .dark {
@@ -85,10 +85,10 @@
     --foreground: 0 0% 98%;
 
     /* Brand identity - dark mode */
-    --brand-primary: 217 91% 65%;
-    --brand-primary-dark: 217 91% 55%;
+    --brand-primary: 0 0% 95%;
+    --brand-primary-dark: 0 0% 85%;
     --brand-secondary: 215 25% 16%;
-    --brand-accent: 217 91% 65%;
+    --brand-accent: 25 95% 58%;
 
     /* Status colors - dark mode */
     --success: 142 76% 46%;
@@ -115,7 +115,7 @@
     --popover: 215 25% 16%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 65%;
+    --primary: 0 0% 95%;
     --primary-foreground: 215 25% 12%;
 
     --secondary: 215 25% 20%;
@@ -132,7 +132,7 @@
 
     --border: 215 25% 20%;
     --input: 215 25% 20%;
-    --ring: 217 91% 65%;
+    --ring: 25 95% 58%;
   }
 }
 
