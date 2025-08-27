@@ -14,7 +14,7 @@ export const Logo = ({ className, showText = true }: LogoProps) => {
         />
       </div>
       {showText && (
-        <span className="text-xl font-bold text-foreground">Snapshot</span>
+        <span className="text-xl font-bold text-white">Snapshot</span>
       )}
     </div>
   );
