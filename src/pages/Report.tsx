@@ -137,7 +137,10 @@ export const Report = () => {
           <div className="lg:col-span-2 space-y-6">
             {/* Verification Sections */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Card className="border-card-border">
+              <Card 
+                className="border-card-border cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => navigate(`/report/${id}/identity`)}
+              >
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <User className="w-5 h-5 text-brand-primary" />
@@ -158,7 +161,10 @@ export const Report = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-card-border">
+              <Card 
+                className="border-card-border cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => navigate(`/report/${id}/employment`)}
+              >
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Briefcase className="w-5 h-5 text-brand-primary" />
@@ -170,16 +176,19 @@ export const Report = () => {
                     <span className="text-sm text-muted-foreground">Status</span>
                     <div className="flex items-center gap-2">
                       {getStatusIcon(reportData.employment)}
-                        <Badge className={getStatusColor(reportData.employment)}>
-                          {reportData.employment === 'partial' ? 'Partial' : 
-                           reportData.employment === 'pending' ? 'Pending' : 'Verified'}
-                        </Badge>
+                      <Badge className={getStatusColor(reportData.employment)}>
+                        {reportData.employment === 'partial' ? 'Partial' : 
+                         reportData.employment === 'pending' ? 'Pending' : 'Verified'}
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-card-border">
+              <Card 
+                className="border-card-border cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => navigate(`/report/${id}/criminal`)}
+              >
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Shield className="w-5 h-5 text-brand-primary" />
@@ -200,7 +209,10 @@ export const Report = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-card-border">
+              <Card 
+                className="border-card-border cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => navigate(`/report/${id}/education`)}
+              >
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <GraduationCap className="w-5 h-5 text-brand-primary" />
@@ -212,16 +224,19 @@ export const Report = () => {
                     <span className="text-sm text-muted-foreground">Status</span>
                     <div className="flex items-center gap-2">
                       {getStatusIcon(reportData.education)}
-                        <Badge className={getStatusColor(reportData.education)}>
-                          {reportData.education === 'unverified' ? 'Unverified' : 
-                           reportData.education === 'pending' ? 'Pending' : 'Verified'}
-                        </Badge>
+                      <Badge className={getStatusColor(reportData.education)}>
+                        {reportData.education === 'unverified' ? 'Unverified' : 
+                         reportData.education === 'pending' ? 'Pending' : 'Verified'}
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-card-border">
+              <Card 
+                className="border-card-border cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => navigate(`/report/${id}/social-media`)}
+              >
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Users className="w-5 h-5 text-brand-primary" />
@@ -233,16 +248,19 @@ export const Report = () => {
                     <span className="text-sm text-muted-foreground">Status</span>
                     <div className="flex items-center gap-2">
                       {getStatusIcon(reportData.socialMedia)}
-                        <Badge className={getStatusColor(reportData.socialMedia)}>
-                          {reportData.socialMedia === 'review' ? 'Review' : 
-                           reportData.socialMedia === 'pending' ? 'Pending' : 'Clear'}
-                        </Badge>
+                      <Badge className={getStatusColor(reportData.socialMedia)}>
+                        {reportData.socialMedia === 'review' ? 'Review' : 
+                         reportData.socialMedia === 'pending' ? 'Pending' : 'Clear'}
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-card-border">
+              <Card 
+                className="border-card-border cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => navigate(`/report/${id}/online-presence`)}
+              >
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Globe className="w-5 h-5 text-brand-primary" />
