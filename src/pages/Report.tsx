@@ -50,7 +50,7 @@ export const Report = () => {
     if (status === 'verified' || status === 'clear') {
       return <CheckCircle className="w-5 h-5 text-status-success" />;
     } else if (status === 'unverified' || status === 'review' || status === 'partial') {
-      return <AlertTriangle className="w-5 h-5 text-orange-600" />;
+      return <AlertTriangle className="w-5 h-5 text-brand-accent" />;
     } else if (status === 'failed') {
       return <XCircle className="w-5 h-5 text-status-danger" />;
     } else {
@@ -62,7 +62,7 @@ export const Report = () => {
     if (status === 'verified' || status === 'clear') {
       return 'bg-status-success-light text-status-success border-status-success/20';
     } else if (status === 'unverified' || status === 'review' || status === 'partial') {
-      return 'bg-orange-50 text-orange-700 border-orange-200';
+      return 'bg-brand-accent/10 text-brand-accent border-brand-accent/20';
     } else if (status === 'failed') {
       return 'bg-status-danger-light text-status-danger border-status-danger/20';
     } else {
@@ -96,11 +96,11 @@ export const Report = () => {
               <Logo />
             </div>
             <div className="flex items-center gap-3">
-              <Button variant="outline" size="sm" className="border-orange-200 hover:bg-orange-50 hover:text-orange-700">
+              <Button variant="outline" size="sm" className="hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-all duration-200">
                 <Download size={16} className="mr-2" />
                 Export PDF
               </Button>
-              <Button variant="outline" size="sm" className="border-orange-200 hover:bg-orange-50 hover:text-orange-700">
+              <Button variant="outline" size="sm" className="hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-all duration-200">
                 <Mail size={16} className="mr-2" />
                 Share Report
               </Button>
@@ -286,7 +286,7 @@ export const Report = () => {
             <Card className="border-card-border">
                 <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <AlertCircle className="w-5 h-5 text-orange-600" />
+                  <AlertCircle className="w-5 h-5 text-brand-accent" />
                   AI Summary
                 </CardTitle>
                 <CardDescription>
@@ -294,7 +294,7 @@ export const Report = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="p-4 bg-gradient-to-r from-orange-50/50 to-muted/50 rounded-lg border-l-4 border-orange-200">
+                <div className="p-4 bg-gradient-to-r from-brand-accent/5 to-muted/50 rounded-lg border-l-4 border-brand-accent/30">
                   <div className="space-y-4 text-sm leading-relaxed">
                     <div className="border-b border-orange-100 pb-3">
                       <div className="font-semibold text-foreground mb-1">Candidate: John Doe</div>
@@ -328,7 +328,7 @@ export const Report = () => {
                       </div>
 
                       <div className="flex items-start gap-2">
-                        <AlertTriangle className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
+                        <AlertTriangle className="w-4 h-4 text-brand-accent mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="font-medium text-foreground">Employment Verification</div>
                           <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
@@ -339,7 +339,7 @@ export const Report = () => {
                       </div>
 
                       <div className="flex items-start gap-2">
-                        <AlertTriangle className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
+                        <AlertTriangle className="w-4 h-4 text-brand-accent mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="font-medium text-foreground">Education Verification</div>
                           <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
@@ -361,7 +361,7 @@ export const Report = () => {
                       </div>
 
                       <div className="flex items-start gap-2">
-                        <AlertTriangle className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
+                        <AlertTriangle className="w-4 h-4 text-brand-accent mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="font-medium text-foreground">Social Media & Web Presence</div>
                           <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
@@ -442,7 +442,7 @@ export const Report = () => {
           <Card className="w-full max-w-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5 text-orange-600" />
+                <AlertTriangle className="w-5 h-5 text-brand-accent" />
                 Adverse Action Notice
               </CardTitle>
               <CardDescription>

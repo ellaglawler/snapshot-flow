@@ -56,7 +56,7 @@ export const CandidatePortal = () => {
     if (status === 'verified' || status === 'clear') {
       return 'bg-status-success-light text-status-success border-status-success/20';
     } else if (status === 'unverified' || status === 'review' || status === 'partial') {
-      return 'bg-orange-50 text-orange-700 border-orange-200';
+      return 'bg-brand-accent/10 text-brand-accent border-brand-accent/20';
     } else {
       return 'bg-status-pending-light text-status-pending border-status-pending/20';
     }

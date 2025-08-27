@@ -30,7 +30,7 @@ export const Education = () => {
     if (status === 'verified') {
       return 'bg-status-success-light text-status-success border-status-success/20';
     } else if (status === 'unverified') {
-      return 'bg-orange-50 text-orange-700 border-orange-200';
+      return 'bg-brand-accent/10 text-brand-accent border-brand-accent/20';
     } else {
       return 'bg-status-pending-light text-status-pending border-status-pending/20';
     }
@@ -85,7 +85,7 @@ export const Education = () => {
                     <CardDescription>Bachelor of Computer Science</CardDescription>
                   </div>
                 </div>
-                <Badge className="bg-orange-50 text-orange-700">
+                <Badge className="bg-brand-accent/10 text-brand-accent">
                   <AlertTriangle className="w-3 h-3 mr-1" />
                   Pending Verification
                 </Badge>
@@ -103,7 +103,7 @@ export const Education = () => {
                 </div>
               </div>
               
-              <div className="p-4 bg-orange-50/50 rounded-lg border border-orange-200">
+              <div className="p-4 bg-brand-accent/5 rounded-lg border border-brand-accent/30">
                 <h4 className="font-medium mb-2 flex items-center gap-2">
                   <Clock className="w-4 h-4" />
                   Verification Status
@@ -224,10 +224,10 @@ export const Education = () => {
               <CardTitle>Education Verification Summary</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex items-start gap-3 p-4 bg-orange-50/50 rounded-lg border border-orange-200">
-                <AlertTriangle className="w-5 h-5 text-orange-600 mt-0.5" />
-                <div>
-                  <p className="font-medium text-orange-700">Degree Verification Pending</p>
+            <div className="flex items-start gap-3 p-4 bg-brand-accent/5 rounded-lg border border-brand-accent/30">
+              <AlertTriangle className="w-5 h-5 text-brand-accent mt-0.5" />
+              <div>
+                <p className="font-medium text-brand-accent">Degree Verification Pending</p>
                   <p className="text-sm text-muted-foreground mt-1">
                     Student enrollment and attendance at Georgia State University has been confirmed through university records. 
                     Final degree verification is pending response from the registrar's office. This is a common delay and does not 

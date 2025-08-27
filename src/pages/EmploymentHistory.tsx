@@ -30,7 +30,7 @@ export const EmploymentHistory = () => {
     if (status === 'verified') {
       return 'bg-status-success-light text-status-success border-status-success/20';
     } else if (status === 'partial') {
-      return 'bg-orange-50 text-orange-700 border-orange-200';
+      return 'bg-brand-accent/10 text-brand-accent border-brand-accent/20';
     } else {
       return 'bg-status-pending-light text-status-pending border-status-pending/20';
     }
@@ -137,7 +137,7 @@ export const EmploymentHistory = () => {
                     <CardDescription>Position Title Unconfirmed</CardDescription>
                   </div>
                 </div>
-                <Badge className="bg-orange-50 text-orange-700">
+                <Badge className="bg-brand-accent/10 text-brand-accent">
                   <AlertTriangle className="w-3 h-3 mr-1" />
                   Partial
                 </Badge>
@@ -150,12 +150,12 @@ export const EmploymentHistory = () => {
                   <span className="text-sm"><strong>Duration:</strong> 2020 - 2022</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <AlertTriangle className="w-4 h-4 text-orange-600" />
+                  <AlertTriangle className="w-4 h-4 text-brand-accent" />
                   <span className="text-sm"><strong>Status:</strong> Partially Verified</span>
                 </div>
               </div>
               
-              <div className="p-4 bg-orange-50/50 rounded-lg border border-orange-200">
+              <div className="p-4 bg-brand-accent/5 rounded-lg border border-brand-accent/30">
                 <h4 className="font-medium mb-2">Verification Issues</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• Employment dates verified: March 2020 - December 2022</li>
@@ -184,10 +184,10 @@ export const EmploymentHistory = () => {
               <CardTitle>Employment Verification Summary</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex items-start gap-3 p-4 bg-orange-50/50 rounded-lg border border-orange-200">
-                <AlertTriangle className="w-5 h-5 text-orange-600 mt-0.5" />
+              <div className="flex items-start gap-3 p-4 bg-brand-accent/5 rounded-lg border border-brand-accent/30">
+                <AlertTriangle className="w-5 h-5 text-brand-accent mt-0.5" />
                 <div>
-                  <p className="font-medium text-orange-700">Employment History Partially Verified</p>
+                  <p className="font-medium text-brand-accent">Employment History Partially Verified</p>
                   <p className="text-sm text-muted-foreground mt-1">
                     Most recent employment at TechWorks Inc. is fully verified with excellent standing. 
                     Previous employment at QuickByte LLC shows verified dates but incomplete job title records. 

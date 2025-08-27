@@ -30,7 +30,7 @@ export const SocialMedia = () => {
     if (status === 'clear') {
       return 'bg-status-success-light text-status-success border-status-success/20';
     } else if (status === 'review') {
-      return 'bg-orange-50 text-orange-700 border-orange-200';
+      return 'bg-brand-accent/10 text-brand-accent border-brand-accent/20';
     } else {
       return 'bg-status-pending-light text-status-pending border-status-pending/20';
     }
@@ -125,7 +125,7 @@ export const SocialMedia = () => {
           <Card className="border-card-border">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5 text-orange-600" />
+                <AlertTriangle className="w-5 h-5 text-brand-accent" />
                 Personal Social Media
               </CardTitle>
               <CardDescription>
@@ -133,14 +133,14 @@ export const SocialMedia = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="p-4 bg-orange-50/50 rounded-lg border border-orange-200">
+              <div className="p-4 bg-brand-accent/5 rounded-lg border border-brand-accent/30">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-8 h-8 bg-blue-500 rounded text-white flex items-center justify-center text-xs font-bold">f</div>
                   <div>
                     <p className="font-medium">Facebook Profile</p>
                     <p className="text-sm text-muted-foreground">Limited public visibility</p>
                   </div>
-                  <Badge className="bg-orange-50 text-orange-700 ml-auto">Minor Flags</Badge>
+                  <Badge className="bg-brand-accent/10 text-brand-accent ml-auto">Minor Flags</Badge>
                 </div>
                 <ul className="text-sm text-muted-foreground space-y-1 ml-11">
                   <li>• Most content is private/friends-only</li>
@@ -181,9 +181,9 @@ export const SocialMedia = () => {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <div className="p-4 bg-orange-50/30 rounded-lg border border-orange-200">
+                <div className="p-4 bg-brand-accent/3 rounded-lg border border-brand-accent/30">
                   <div className="flex items-start gap-3">
-                    <Flag className="w-5 h-5 text-orange-600 mt-0.5" />
+                    <Flag className="w-5 h-5 text-brand-accent mt-0.5" />
                     <div className="flex-1">
                       <h4 className="font-medium mb-2">Flagged Content Summary</h4>
                       <div className="space-y-3">
@@ -288,10 +288,10 @@ export const SocialMedia = () => {
             <CardTitle>Social Media Analysis Summary</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex items-start gap-3 p-4 bg-orange-50/50 rounded-lg border border-orange-200">
-              <AlertTriangle className="w-5 h-5 text-orange-600 mt-0.5" />
+            <div className="flex items-start gap-3 p-4 bg-brand-accent/5 rounded-lg border border-brand-accent/30">
+              <AlertTriangle className="w-5 h-5 text-brand-accent mt-0.5" />
               <div>
-                <p className="font-medium text-orange-700">Minor Flags Identified - No Policy Violations</p>
+                <p className="font-medium text-brand-accent">Minor Flags Identified - No Policy Violations</p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Professional social media presence is excellent with appropriate content and connections. 
                   Personal accounts show minimal activity with only minor sarcastic humor posts flagged by AI screening. 
