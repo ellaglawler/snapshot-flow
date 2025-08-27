@@ -49,7 +49,7 @@ export const Dashboard = () => {
             <Logo className="text-white [&_span]:text-white" />
             <div className="flex items-center gap-4">
               <div className="text-right">
-                <p className="text-sm font-medium text-white">Acme Corp Security</p>
+                <p className="text-sm font-medium text-white">Orien Careers Security</p>
                 <p className="text-xs text-white/70">security@acmecorp.com</p>
               </div>
               <Button variant="outline" size="sm" className="border-brand-accent/50 text-brand-accent hover:bg-brand-accent hover:text-black font-semibold">
