@@ -60,7 +60,7 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
       {candidates.map((candidate) => (
         <Card 
           key={candidate.id} 
-          className="p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer border-card-border bg-gradient-to-r from-card to-card/50 group"
+          className="p-5 border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20 cursor-pointer group"
           onClick={() => navigate(`/report/${candidate.id}`)}
         >
           <div className="flex items-center justify-between">
@@ -73,20 +73,20 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
               
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-lg font-bold text-card-foreground group-hover:text-brand-primary transition-colors">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-accent transition-colors">
                     {candidate.name}
                   </h3>
                   <StatusBadge status={candidate.status} />
                   <BackgroundCheckProgress candidate={candidate} />
                 </div>
                 
-                <div className="flex items-center gap-6 text-sm text-muted-foreground mb-2">
+                <div className="flex items-center gap-6 text-sm text-white/70 mb-2">
                   <div className="flex items-center gap-1.5">
-                    <Mail size={14} className="text-brand-primary/60" />
+                    <Mail size={14} className="text-brand-accent/80" />
                     <span className="font-medium">{candidate.email}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Calendar size={14} className="text-brand-primary/60" />
+                    <Calendar size={14} className="text-brand-accent/80" />
                     <span>Added {formatDate(candidate.dateAdded)}</span>
                   </div>
                   {candidate.dateCompleted && (
@@ -99,8 +99,8 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
                 {candidate.status === 'in-progress' && (
                   <div className="mt-2">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-medium text-muted-foreground">Progress</span>
-                      <span className="text-xs text-brand-primary font-bold">{getProgressPercentage(candidate.status)}%</span>
+                      <span className="text-xs font-medium text-white/60">Progress</span>
+                      <span className="text-xs text-brand-accent font-bold">{getProgressPercentage(candidate.status)}%</span>
                     </div>
                     <Progress 
                       value={getProgressPercentage(candidate.status)} 
