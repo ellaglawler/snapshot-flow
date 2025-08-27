@@ -49,7 +49,7 @@ export const Dashboard = () => {
             <Logo className="text-white [&_span]:text-white" />
             <div className="flex items-center gap-4">
               <div className="text-right">
-                <p className="text-sm font-medium text-white">🔒 Acme Corp Security</p>
+                <p className="text-sm font-medium text-white">Acme Corp Security</p>
                 <p className="text-xs text-white/70">security@acmecorp.com</p>
               </div>
               <Button variant="outline" size="sm" className="border-brand-accent/50 text-brand-accent hover:bg-brand-accent hover:text-black font-semibold">
@@ -65,7 +65,7 @@ export const Dashboard = () => {
         <div className="mb-8 relative">
           <div className="absolute -left-4 top-0 w-1 h-full bg-brand-accent rounded-full"></div>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-primary to-brand-primary bg-clip-text text-transparent mb-2">
-            🛡️ Security Background Checks
+            Security Background Checks
           </h1>
           <p className="text-muted-foreground text-lg">Advanced candidate screening and threat assessment</p>
         </div>
@@ -133,13 +133,13 @@ export const Dashboard = () => {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-semibold text-brand-primary">🔍 Recent Security Screenings</h2>
+              <h2 className="text-xl font-semibold text-brand-primary">Recent Security Screenings</h2>
               <Button 
                 onClick={() => setShowForm(!showForm)}
                 className="bg-brand-primary hover:bg-brand-primary-dark text-white border border-brand-accent/20 shadow-lg hover:shadow-xl transition-all duration-200"
               >
                 <UserPlus size={16} className="mr-2" />
-                🔒 Run Security Check
+                Run Security Check
               </Button>
             </div>
 
@@ -156,7 +156,7 @@ export const Dashboard = () => {
 
             <Card className="border-card-border hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-card to-brand-primary/5 border-brand-primary/10">
               <CardHeader className="pb-4">
-                <CardTitle className="text-lg text-brand-primary">⚡ Security Operations</CardTitle>
+                <CardTitle className="text-lg text-brand-primary">Security Operations</CardTitle>
                 <CardDescription>Critical security tasks and monitoring</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -167,7 +167,7 @@ export const Dashboard = () => {
                   <div className="p-1.5 bg-brand-primary/10 rounded-md mr-3">
                     <Users size={16} className="text-brand-primary" />
                   </div>
-                  <span className="font-medium text-brand-primary">📋 Bulk Security Import</span>
+                  <span className="font-medium text-brand-primary">Bulk Security Import</span>
                 </Button>
                 <Button 
                   variant="outline" 
@@ -176,7 +176,7 @@ export const Dashboard = () => {
                   <div className="p-1.5 bg-status-success/10 rounded-md mr-3">
                     <CheckCircle size={16} className="text-status-success" />
                   </div>
-                  <span className="font-medium text-status-success">📊 Security Reports</span>
+                  <span className="font-medium text-status-success">Security Reports</span>
                 </Button>
                 <Button 
                   variant="outline" 
@@ -185,7 +185,7 @@ export const Dashboard = () => {
                   <div className="p-1.5 bg-brand-accent/10 rounded-md mr-3">
                     <AlertTriangle size={16} className="text-brand-accent" />
                   </div>
-                  <span className="font-medium text-brand-accent">⚠️ Critical Reviews ({statusCounts.review || 0})</span>
+                  <span className="font-medium text-brand-accent">Critical Reviews ({statusCounts.review || 0})</span>
                 </Button>
                 <Button 
                   onClick={() => setShowForm(true)}
@@ -194,7 +194,7 @@ export const Dashboard = () => {
                   <div className="p-1.5 bg-brand-accent/20 rounded-md mr-3">
                     <UserPlus size={16} className="text-brand-accent" />
                   </div>
-                  <span className="font-medium text-white">🔒 New Security Screening</span>
+                  <span className="font-medium text-white">New Security Screening</span>
                 </Button>
               </CardContent>
             </Card>
