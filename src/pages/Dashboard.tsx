@@ -93,43 +93,43 @@ export const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-success-light to-status-success-light/50">
+          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-status-success/10 rounded-xl border border-status-success/20">
-                  <CheckCircle className="w-6 h-6 text-status-success" />
+                <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/30">
+                  <CheckCircle className="w-6 h-6 text-brand-accent" />
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-status-success">{statusCounts.clear || 0}</p>
-                  <p className="text-sm font-medium text-status-success/80">Cleared</p>
+                  <p className="text-3xl font-bold text-white">{statusCounts.clear || 0}</p>
+                  <p className="text-sm font-medium text-white/70">Cleared</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-warning-light to-status-warning-light/50">
+          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-status-warning/10 rounded-xl border border-status-warning/20">
-                  <AlertTriangle className="w-6 h-6 text-status-warning" />
+                <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/30">
+                  <AlertTriangle className="w-6 h-6 text-brand-accent" />
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-status-warning">{statusCounts.review || 0}</p>
-                  <p className="text-sm font-medium text-status-warning/80">Need Review</p>
+                  <p className="text-3xl font-bold text-white">{statusCounts.review || 0}</p>
+                  <p className="text-sm font-medium text-white/70">Need Review</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-pending-light to-status-pending-light/50">
+          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-status-pending/10 rounded-xl border border-status-pending/20">
-                  <Clock className="w-6 h-6 text-status-pending" />
+                <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/30">
+                  <Clock className="w-6 h-6 text-brand-accent" />
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-status-pending">{(statusCounts.pending || 0) + (statusCounts['in-progress'] || 0)}</p>
-                  <p className="text-sm font-medium text-status-pending/80">In Progress</p>
+                  <p className="text-3xl font-bold text-white">{(statusCounts.pending || 0) + (statusCounts['in-progress'] || 0)}</p>
+                  <p className="text-sm font-medium text-white/70">In Progress</p>
                 </div>
               </div>
             </CardContent>
