@@ -277,7 +277,83 @@ export const Report = () => {
               </CardHeader>
               <CardContent>
                 <div className="p-4 bg-gradient-to-r from-orange-50/50 to-muted/50 rounded-lg border-l-4 border-orange-200">
-                  <p className="text-sm leading-relaxed">{reportData.summary}</p>
+                  <div className="space-y-4 text-sm leading-relaxed">
+                    <div className="border-b border-orange-100 pb-3">
+                      <div className="font-semibold text-foreground mb-1">Candidate: John Doe</div>
+                      <div className="text-muted-foreground">Position Applied: Software Engineer</div>
+                      <div className="text-muted-foreground">Date of Report: August 27, 2025</div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-status-success mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium text-foreground">Identity Verification</div>
+                          <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
+                            <li>• Full legal name confirmed: Jordan Alexander Mitchell</li>
+                            <li>• Social Security Number: Valid and matched with provided DOB (07/14/1998)</li>
+                            <li>• No red flags in identity validation</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-status-success mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium text-foreground">Criminal Record</div>
+                          <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
+                            <li>• National criminal database search: Clear</li>
+                            <li>• State-level record search (GA, FL, NC): Clear</li>
+                            <li>• Sex offender registry: Not listed</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <AlertTriangle className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium text-foreground">Employment Verification</div>
+                          <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
+                            <li>• TechWorks Inc. (2022–2024): Confirmed title as Software Engineer</li>
+                            <li>• QuickByte LLC (2020–2022): Employment dates verified, but job title could not be confirmed (records incomplete)</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <AlertTriangle className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium text-foreground">Education Verification</div>
+                          <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
+                            <li>• Georgia State University: Bachelor of Computer Science (2016–2020)</li>
+                            <li>• Degree pending verification – registrar's office has not yet responded</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-status-success mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium text-foreground">Reference & Reputation</div>
+                          <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
+                            <li>• 2 professional references provided; both responded positively regarding technical skills and teamwork</li>
+                            <li>• No adverse findings from public professional profiles</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <AlertTriangle className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium text-foreground">Social Media & Web Presence</div>
+                          <ul className="text-muted-foreground mt-1 space-y-1 text-xs ml-2">
+                            <li>• Professional accounts: Appropriate, no concerning activity</li>
+                            <li>• Personal social media: Minor flagged posts (sarcastic humor; no discriminatory or violent content)</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
