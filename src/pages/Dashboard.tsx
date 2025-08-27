@@ -43,7 +43,7 @@ export const Dashboard = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header with Security Theme */}
-      <header className="bg-gradient-to-r from-brand-primary via-brand-primary to-brand-primary-dark shadow-2xl border-b-2 border-brand-accent/20">
+      <header className="bg-black shadow-2xl border-b-2 border-brand-accent/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Logo className="text-white [&_span]:text-white" />
