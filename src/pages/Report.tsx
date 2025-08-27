@@ -170,10 +170,10 @@ export const Report = () => {
                     <span className="text-sm text-muted-foreground">Status</span>
                     <div className="flex items-center gap-2">
                       {getStatusIcon(reportData.employment)}
-                      <Badge className={getStatusColor(reportData.employment)}>
-                        {reportData.employment === 'verified' ? 'Verified' : 
-                         reportData.employment === 'partial' ? 'Partial' : 'Pending'}
-                      </Badge>
+                        <Badge className={getStatusColor(reportData.employment)}>
+                          {reportData.employment === 'partial' ? 'Partial' : 
+                           reportData.employment === 'pending' ? 'Pending' : 'Verified'}
+                        </Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -212,10 +212,10 @@ export const Report = () => {
                     <span className="text-sm text-muted-foreground">Status</span>
                     <div className="flex items-center gap-2">
                       {getStatusIcon(reportData.education)}
-                      <Badge className={getStatusColor(reportData.education)}>
-                        {reportData.education === 'verified' ? 'Verified' : 
-                         reportData.education === 'unverified' ? 'Unverified' : 'Pending'}
-                      </Badge>
+                        <Badge className={getStatusColor(reportData.education)}>
+                          {reportData.education === 'unverified' ? 'Unverified' : 
+                           reportData.education === 'pending' ? 'Pending' : 'Verified'}
+                        </Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -233,10 +233,10 @@ export const Report = () => {
                     <span className="text-sm text-muted-foreground">Status</span>
                     <div className="flex items-center gap-2">
                       {getStatusIcon(reportData.socialMedia)}
-                      <Badge className={getStatusColor(reportData.socialMedia)}>
-                        {reportData.socialMedia === 'clear' ? 'Clear' : 
-                         reportData.socialMedia === 'review' ? 'Review' : 'Pending'}
-                      </Badge>
+                        <Badge className={getStatusColor(reportData.socialMedia)}>
+                          {reportData.socialMedia === 'review' ? 'Review' : 
+                           reportData.socialMedia === 'pending' ? 'Pending' : 'Clear'}
+                        </Badge>
                     </div>
                   </div>
                 </CardContent>

@@ -202,10 +202,10 @@ export const CandidatePortal = () => {
                       <span className="text-sm text-muted-foreground">Status</span>
                       <div className="flex items-center gap-2">
                         {getStatusIcon(reportData.education)}
-                        <Badge className={getStatusColor(reportData.education)}>
-                          {reportData.education === 'verified' ? 'Verified' : 
-                           reportData.education === 'unverified' ? 'In Review' : 'Pending'}
-                        </Badge>
+                          <Badge className={getStatusColor(reportData.education)}>
+                            {reportData.education === 'unverified' ? 'In Review' : 
+                             reportData.education === 'pending' ? 'Pending' : 'Verified'}
+                          </Badge>
                       </div>
                     </div>
                   </CardContent>
@@ -223,10 +223,10 @@ export const CandidatePortal = () => {
                       <span className="text-sm text-muted-foreground">Status</span>
                       <div className="flex items-center gap-2">
                         {getStatusIcon(reportData.employment)}
-                        <Badge className={getStatusColor(reportData.employment)}>
-                          {reportData.employment === 'verified' ? 'Verified' : 
-                           reportData.employment === 'partial' ? 'Partial' : 'Pending'}
-                        </Badge>
+                          <Badge className={getStatusColor(reportData.employment)}>
+                            {reportData.employment === 'partial' ? 'Partial' : 
+                             reportData.employment === 'pending' ? 'Pending' : 'Verified'}
+                          </Badge>
                       </div>
                     </div>
                   </CardContent>
