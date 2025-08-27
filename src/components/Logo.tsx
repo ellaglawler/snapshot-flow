@@ -10,7 +10,7 @@ export const Logo = ({ className, showText = true }: LogoProps) => {
         <img 
           src="/lovable-uploads/bfd78908-aa30-49ad-908c-423d090f1051.png" 
           alt="Snapshot Logo" 
-          className="w-10 h-10 object-contain brightness-0 invert"
+          className="w-10 h-10 object-contain brightness-0"
         />
       </div>
       {showText && (
