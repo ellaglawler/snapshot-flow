@@ -42,17 +42,17 @@ export const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-card-border bg-white">
+      {/* Header with Brand Gradient */}
+      <header className="bg-gradient-to-r from-brand-primary to-brand-accent shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Logo />
+            <Logo className="text-white [&_span]:text-white" />
             <div className="flex items-center gap-4">
               <div className="text-right">
-                <p className="text-sm font-medium">Acme Corp HR</p>
-                <p className="text-xs text-muted-foreground">hr@acmecorp.com</p>
+                <p className="text-sm font-medium text-white">Acme Corp HR</p>
+                <p className="text-xs text-white/70">hr@acmecorp.com</p>
               </div>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
                 Logout
               </Button>
             </div>
@@ -61,65 +61,68 @@ export const Dashboard = () => {
       </header>
 
       <div className="container mx-auto px-4 py-8">
-        {/* Dashboard Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">Background Check Dashboard</h1>
-          <p className="text-muted-foreground">Manage candidate screenings and view reports</p>
+        {/* Dashboard Header with Brand Accent */}
+        <div className="mb-8 relative">
+          <div className="absolute -left-4 top-0 w-1 h-full bg-brand-primary rounded-full"></div>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-primary to-brand-accent bg-clip-text text-transparent mb-2">
+            Background Check Dashboard
+          </h1>
+          <p className="text-muted-foreground text-lg">Manage candidate screenings and view reports</p>
         </div>
 
-        {/* Stats Cards */}
+        {/* Enhanced Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <Card className="border-card-border">
-            <CardContent className="p-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <Users className="w-5 h-5 text-blue-600" />
+          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-card to-brand-secondary/30">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-brand-primary/10 rounded-xl border border-brand-primary/20">
+                  <Users className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">{candidates.length}</p>
-                  <p className="text-sm text-muted-foreground">Total Candidates</p>
+                  <p className="text-3xl font-bold text-card-foreground">{candidates.length}</p>
+                  <p className="text-sm font-medium text-muted-foreground">Total Candidates</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-card-border">
-            <CardContent className="p-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-status-success-light rounded-lg">
-                  <CheckCircle className="w-5 h-5 text-status-success" />
+          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-success-light to-status-success-light/50">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-status-success/10 rounded-xl border border-status-success/20">
+                  <CheckCircle className="w-6 h-6 text-status-success" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">{statusCounts.clear || 0}</p>
-                  <p className="text-sm text-muted-foreground">Cleared</p>
+                  <p className="text-3xl font-bold text-status-success">{statusCounts.clear || 0}</p>
+                  <p className="text-sm font-medium text-status-success/80">Cleared</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-card-border">
-            <CardContent className="p-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-status-warning-light rounded-lg">
-                  <AlertTriangle className="w-5 h-5 text-orange-600" />
+          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-warning-light to-status-warning-light/50">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-status-warning/10 rounded-xl border border-status-warning/20">
+                  <AlertTriangle className="w-6 h-6 text-status-warning" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">{statusCounts.review || 0}</p>
-                  <p className="text-sm text-muted-foreground">Need Review</p>
+                  <p className="text-3xl font-bold text-status-warning">{statusCounts.review || 0}</p>
+                  <p className="text-sm font-medium text-status-warning/80">Need Review</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-card-border">
-            <CardContent className="p-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-status-pending-light rounded-lg">
-                  <Clock className="w-5 h-5 text-status-pending" />
+          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-pending-light to-status-pending-light/50">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-status-pending/10 rounded-xl border border-status-pending/20">
+                  <Clock className="w-6 h-6 text-status-pending" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">{(statusCounts.pending || 0) + (statusCounts['in-progress'] || 0)}</p>
-                  <p className="text-sm text-muted-foreground">In Progress</p>
+                  <p className="text-3xl font-bold text-status-pending">{(statusCounts.pending || 0) + (statusCounts['in-progress'] || 0)}</p>
+                  <p className="text-sm font-medium text-status-pending/80">In Progress</p>
                 </div>
               </div>
             </CardContent>
@@ -151,23 +154,47 @@ export const Dashboard = () => {
               />
             )}
 
-            <Card className="border-card-border">
-              <CardHeader>
-                <CardTitle className="text-lg">Quick Actions</CardTitle>
+            <Card className="border-card-border hover:shadow-lg transition-all duration-300">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-lg text-brand-primary">Quick Actions</CardTitle>
                 <CardDescription>Common tasks and shortcuts</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button variant="outline" className="w-full justify-start">
-                  <Users size={16} className="mr-2" />
-                  Bulk Import Candidates
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start h-12 hover:bg-brand-primary/5 hover:border-brand-primary/30 transition-all duration-200"
+                >
+                  <div className="p-1.5 bg-brand-primary/10 rounded-md mr-3">
+                    <Users size={16} className="text-brand-primary" />
+                  </div>
+                  <span className="font-medium">Bulk Import Candidates</span>
                 </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <CheckCircle size={16} className="mr-2" />
-                  View All Reports
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start h-12 hover:bg-status-success/5 hover:border-status-success/30 transition-all duration-200"
+                >
+                  <div className="p-1.5 bg-status-success/10 rounded-md mr-3">
+                    <CheckCircle size={16} className="text-status-success" />
+                  </div>
+                  <span className="font-medium">View All Reports</span>
                 </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <AlertTriangle size={16} className="mr-2" />
-                  Pending Reviews ({statusCounts.review || 0})
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start h-12 hover:bg-status-warning/5 hover:border-status-warning/30 transition-all duration-200"
+                >
+                  <div className="p-1.5 bg-status-warning/10 rounded-md mr-3">
+                    <AlertTriangle size={16} className="text-status-warning" />
+                  </div>
+                  <span className="font-medium">Pending Reviews ({statusCounts.review || 0})</span>
+                </Button>
+                <Button 
+                  onClick={() => setShowForm(true)}
+                  className="w-full justify-start h-12 bg-brand-primary hover:bg-brand-primary-dark transition-all duration-200"
+                >
+                  <div className="p-1.5 bg-white/20 rounded-md mr-3">
+                    <UserPlus size={16} className="text-white" />
+                  </div>
+                  <span className="font-medium text-white">+ New Candidate</span>
                 </Button>
               </CardContent>
             </Card>
