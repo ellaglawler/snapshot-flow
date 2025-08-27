@@ -41,12 +41,12 @@ export const Dashboard = () => {
   const statusCounts = getStatusCounts();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-background">
       {/* Header with Security Theme */}
       <header className="bg-gradient-to-r from-brand-primary via-brand-primary to-brand-primary-dark shadow-2xl border-b-2 border-brand-accent/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Logo />
+            <Logo className="text-white [&_span]:text-white" />
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <p className="text-sm font-medium text-white">🔒 Acme Corp Security</p>
@@ -64,15 +64,10 @@ export const Dashboard = () => {
         {/* Dashboard Header with Security Theme */}
         <div className="mb-8 relative">
           <div className="absolute -left-4 top-0 w-1 h-full bg-brand-accent rounded-full"></div>
-          <h1 className="text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-              <div className="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center">
-                <div className="w-3 h-3 bg-black rounded-full"></div>
-              </div>
-            </div>
-            Security Background Checks
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-primary to-brand-primary bg-clip-text text-transparent mb-2">
+            🛡️ Security Background Checks
           </h1>
-          <p className="text-slate-300 text-lg">Advanced candidate screening and threat assessment</p>
+          <p className="text-muted-foreground text-lg">Advanced candidate screening and threat assessment</p>
         </div>
 
         {/* Enhanced Stats Cards */}
@@ -91,43 +86,43 @@ export const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-success to-status-success/80 border-brand-accent/20">
+          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-success-light to-status-success-light/50">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-brand-accent/20 rounded-xl border border-brand-accent/30">
-                  <CheckCircle className="w-6 h-6 text-brand-accent" />
+                <div className="p-3 bg-status-success/10 rounded-xl border border-status-success/20">
+                  <CheckCircle className="w-6 h-6 text-status-success" />
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-white">{statusCounts.clear || 0}</p>
-                  <p className="text-sm font-medium text-white/70">Cleared</p>
+                  <p className="text-3xl font-bold text-status-success">{statusCounts.clear || 0}</p>
+                  <p className="text-sm font-medium text-status-success/80">Cleared</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
+          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-warning-light to-status-warning-light/50">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-brand-accent/20 rounded-xl border border-brand-accent/30">
-                  <AlertTriangle className="w-6 h-6 text-brand-accent" />
+                <div className="p-3 bg-status-warning/10 rounded-xl border border-status-warning/20">
+                  <AlertTriangle className="w-6 h-6 text-status-warning" />
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-white">{statusCounts.review || 0}</p>
-                  <p className="text-sm font-medium text-white/70">Need Review</p>
+                  <p className="text-3xl font-bold text-status-warning">{statusCounts.review || 0}</p>
+                  <p className="text-sm font-medium text-status-warning/80">Need Review</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-card-border hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-brand-primary to-brand-primary-dark border-brand-accent/20">
+          <Card className="border-card-border hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-status-pending-light to-status-pending-light/50">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-brand-accent/20 rounded-xl border border-brand-accent/30">
-                  <Clock className="w-6 h-6 text-brand-accent" />
+                <div className="p-3 bg-status-pending/10 rounded-xl border border-status-pending/20">
+                  <Clock className="w-6 h-6 text-status-pending" />
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-white">{(statusCounts.pending || 0) + (statusCounts['in-progress'] || 0)}</p>
-                  <p className="text-sm font-medium text-white/70">In Progress</p>
+                  <p className="text-3xl font-bold text-status-pending">{(statusCounts.pending || 0) + (statusCounts['in-progress'] || 0)}</p>
+                  <p className="text-sm font-medium text-status-pending/80">In Progress</p>
                 </div>
               </div>
             </CardContent>
@@ -138,7 +133,7 @@ export const Dashboard = () => {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-semibold text-white">🔍 Recent Security Screenings</h2>
+              <h2 className="text-xl font-semibold text-brand-primary">🔍 Recent Security Screenings</h2>
               <Button 
                 onClick={() => setShowForm(!showForm)}
                 className="bg-brand-primary hover:bg-brand-primary-dark text-white border border-brand-accent/20 shadow-lg hover:shadow-xl transition-all duration-200"
@@ -159,38 +154,38 @@ export const Dashboard = () => {
               />
             )}
 
-            <Card className="border-card-border hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-slate-800 to-slate-700 border-brand-primary/20">
+            <Card className="border-card-border hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-card to-brand-primary/5 border-brand-primary/10">
               <CardHeader className="pb-4">
-                <CardTitle className="text-lg text-white">⚡ Security Operations</CardTitle>
-                <CardDescription className="text-slate-300">Critical security tasks and monitoring</CardDescription>
+                <CardTitle className="text-lg text-brand-primary">⚡ Security Operations</CardTitle>
+                <CardDescription>Critical security tasks and monitoring</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
                 <Button 
                   variant="outline" 
-                  className="w-full justify-start h-12 hover:bg-brand-primary/20 hover:border-brand-accent/50 transition-all duration-200 border-brand-primary/30 text-white"
+                  className="w-full justify-start h-12 hover:bg-brand-primary/10 hover:border-brand-primary/50 transition-all duration-200 border-brand-primary/20"
                 >
-                  <div className="p-1.5 bg-brand-accent/20 rounded-md mr-3">
-                    <Users size={16} className="text-brand-accent" />
+                  <div className="p-1.5 bg-brand-primary/10 rounded-md mr-3">
+                    <Users size={16} className="text-brand-primary" />
                   </div>
-                  <span className="font-medium">📋 Bulk Security Import</span>
+                  <span className="font-medium text-brand-primary">📋 Bulk Security Import</span>
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="w-full justify-start h-12 hover:bg-status-success/20 hover:border-status-success/50 transition-all duration-200 border-status-success/30 text-white"
+                  className="w-full justify-start h-12 hover:bg-status-success/10 hover:border-status-success/50 transition-all duration-200 border-status-success/20"
                 >
-                  <div className="p-1.5 bg-status-success/20 rounded-md mr-3">
+                  <div className="p-1.5 bg-status-success/10 rounded-md mr-3">
                     <CheckCircle size={16} className="text-status-success" />
                   </div>
-                  <span className="font-medium">📊 Security Reports</span>
+                  <span className="font-medium text-status-success">📊 Security Reports</span>
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="w-full justify-start h-12 hover:bg-brand-accent/20 hover:border-brand-accent/50 transition-all duration-200 border-brand-accent/30 text-white"
+                  className="w-full justify-start h-12 hover:bg-brand-accent/10 hover:border-brand-accent/50 transition-all duration-200 border-brand-accent/20"
                 >
-                  <div className="p-1.5 bg-brand-accent/20 rounded-md mr-3">
+                  <div className="p-1.5 bg-brand-accent/10 rounded-md mr-3">
                     <AlertTriangle size={16} className="text-brand-accent" />
                   </div>
-                  <span className="font-medium">⚠️ Critical Reviews ({statusCounts.review || 0})</span>
+                  <span className="font-medium text-brand-accent">⚠️ Critical Reviews ({statusCounts.review || 0})</span>
                 </Button>
                 <Button 
                   onClick={() => setShowForm(true)}
