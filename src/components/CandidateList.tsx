@@ -78,7 +78,6 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
                       {candidate.name}
                     </h3>
                   </div>
-                  <StatusBadge status={candidate.status} />
                 </div>
                 <div className="mb-2">
                   <BackgroundCheckProgress candidate={candidate} />
@@ -93,6 +92,7 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
                     <Calendar size={14} className="text-brand-primary/60" />
                     <span>Added {formatDate(candidate.dateAdded)}</span>
                   </div>
+                  <StatusBadge status={candidate.status} />
                 </div>
 
                 {candidate.status === 'in-progress' && (
