@@ -93,11 +93,6 @@ export const CandidateList = ({ candidates }: CandidateListProps) => {
                     <Calendar size={14} className="text-brand-primary/60" />
                     <span>Added {formatDate(candidate.dateAdded)}</span>
                   </div>
-                  {candidate.dateCompleted && (
-                    <div className="text-status-success font-medium">
-                      ✅ Completed {formatDate(candidate.dateCompleted)}
-                    </div>
-                  )}
                 </div>
 
                 {candidate.status === 'in-progress' && (
