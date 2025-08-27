@@ -96,11 +96,11 @@ export const Report = () => {
               <Logo />
             </div>
             <div className="flex items-center gap-3">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="border-orange-200 hover:bg-orange-50 hover:text-orange-700">
                 <Download size={16} className="mr-2" />
                 Export PDF
               </Button>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="border-orange-200 hover:bg-orange-50 hover:text-orange-700">
                 <Mail size={16} className="mr-2" />
                 Share Report
               </Button>
@@ -266,9 +266,9 @@ export const Report = () => {
 
             {/* AI Summary */}
             <Card className="border-card-border">
-              <CardHeader>
+                <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <AlertCircle className="w-5 h-5 text-brand-primary" />
+                  <AlertCircle className="w-5 h-5 text-orange-600" />
                   AI Summary
                 </CardTitle>
                 <CardDescription>
@@ -276,7 +276,7 @@ export const Report = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="p-4 bg-muted/50 rounded-lg">
+                <div className="p-4 bg-gradient-to-r from-orange-50/50 to-muted/50 rounded-lg border-l-4 border-orange-200">
                   <p className="text-sm leading-relaxed">{reportData.summary}</p>
                 </div>
               </CardContent>
