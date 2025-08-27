@@ -17,7 +17,9 @@ import {
   Briefcase,
   AlertCircle,
   Download,
-  Mail
+  Mail,
+  Globe,
+  Users
 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -134,7 +136,7 @@ export const Report = () => {
           {/* Main Report */}
           <div className="lg:col-span-2 space-y-6">
             {/* Verification Sections */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Card className="border-card-border">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
@@ -214,6 +216,48 @@ export const Report = () => {
                         {reportData.employment === 'verified' ? 'Verified' : 
                          reportData.employment === 'partial' ? 'Partial' : 'Pending'}
                       </Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-card-border">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Users className="w-5 h-5 text-brand-primary" />
+                    Social Media
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground">Status</span>
+                    <div className="flex items-center gap-2">
+                      {getStatusIcon(reportData.socialMedia)}
+                      <Badge className={getStatusColor(reportData.socialMedia)}>
+                        {reportData.socialMedia === 'clear' ? 'Clear' : 
+                         reportData.socialMedia === 'review' ? 'Review' : 'Pending'}
+                      </Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-card-border">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Globe className="w-5 h-5 text-brand-primary" />
+                    Online Presence
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground">Status</span>
+                    <div className="flex items-center gap-2">
+                      {getStatusIcon(reportData.onlinePresence)}
+                       <Badge className={getStatusColor(reportData.onlinePresence)}>
+                         {reportData.onlinePresence === 'clear' ? 'Clear' : 
+                          reportData.onlinePresence === 'pending' ? 'Pending' : 'Review'}
+                       </Badge>
                     </div>
                   </div>
                 </CardContent>
