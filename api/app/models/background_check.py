@@ -18,6 +18,7 @@ class BackgroundCheck(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     candidate_id = Column(Integer, ForeignKey("candidates.id"), nullable=False)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     status = Column(Enum(CheckStatus), default=CheckStatus.PENDING)
     
     # Check types
@@ -35,4 +36,6 @@ class BackgroundCheck(Base):
     
     # Relationships
     candidate = relationship("Candidate", back_populates="background_checks")
+    created_by_user = relationship("User", back_populates="created_checks")
     check_results = relationship("CheckResult", back_populates="background_check")
+    reports = relationship("Report", back_populates="background_check")

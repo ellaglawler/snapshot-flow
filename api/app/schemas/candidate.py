@@ -15,6 +15,7 @@ class CandidateBase(BaseModel):
 
 class CandidateCreate(CandidateBase):
     consent_given: bool = False
+    organization_id: int
 
 
 class CandidateUpdate(BaseModel):
@@ -30,6 +31,8 @@ class CandidateResponse(CandidateBase):
     id: int
     consent_given: bool
     consent_date: Optional[datetime] = None
+    organization_id: int
+    created_by_user_id: int
     created_at: datetime
     updated_at: Optional[datetime] = None
     background_checks: List[BackgroundCheckResponse] = []

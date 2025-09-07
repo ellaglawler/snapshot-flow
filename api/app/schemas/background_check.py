@@ -17,6 +17,7 @@ class BackgroundCheckCreate(BaseModel):
 class BackgroundCheckResponse(BaseModel):
     id: int
     candidate_id: int
+    created_by_user_id: int
     status: CheckStatus
     criminal_check: bool
     education_verification: bool
