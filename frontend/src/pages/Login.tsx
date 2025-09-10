@@ -20,7 +20,7 @@ export const Login = () => {
 
     // Fake validation - any email/password combination works
     if (email.trim() && password.trim()) {
-      navigate("/dashboard");
+      navigate("/submit-candidate");
     }
     setIsLoading(false);
   };

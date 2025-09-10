@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
+import { CandidateSubmission } from "./pages/CandidateSubmission";
 import { Report } from "./pages/Report";
 import { CandidateConsent } from "./pages/CandidateConsent";
 import { CandidatePortal } from "./pages/CandidatePortal";
@@ -26,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/submit-candidate" element={<CandidateSubmission />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/report/:id" element={<Report />} />
           <Route path="/report/:id/identity" element={<IdentityVerification />} />
